@@ -12,11 +12,11 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return new DayFragment();
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return 1;
     }
 }
