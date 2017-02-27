@@ -20,7 +20,7 @@ public class DayFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_day, container, false);
 
         TextView day = (TextView) rootView.findViewById(R.id.day);
-        day.setText("Which day is it today?");
+        day.setText(getArguments().getString("day"));
 
         return rootView;
     }
