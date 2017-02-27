@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class CustomFragmentPagerAdapter extends FragmentPagerAdapter{
+    private String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
     public CustomFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -16,7 +17,7 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter{
         DayFragment dayFragment = new DayFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putString("day", "I don't know which day it is today");
+        bundle.putString("day", days[position]);
         dayFragment.setArguments(bundle);
 
         return dayFragment;
@@ -24,6 +25,6 @@ public class CustomFragmentPagerAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return 1;
+        return days.length;
     }
 }
